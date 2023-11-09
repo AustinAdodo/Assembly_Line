@@ -1,3 +1,5 @@
+//npm install --save-dev @angular/core/testing
+
 import { By } from '@angular/platform-browser';
 import {
   ComponentFixture,
