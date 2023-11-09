@@ -1,0 +1,21 @@
+<!-- TODO -- src/app/assemblyline/assemblyline.component.html -->
+<table>
+  <thead>
+    <tr>
+      <th>Idea</th>
+      <th>Development</th>
+      <th>Testing</th>
+      <th>Deployment</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of items">
+    <tr *ngFor="let stage of stages; let j = index">
+      <td *ngFor="let column of stage.columns; let i = index" (click)="moveItem(item, j, i, true)" (contextmenu)="moveItem(item, j, i, false); $event.preventDefault()" data-testid="assembly-add-item">
+        {{ item[column] || '' }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
