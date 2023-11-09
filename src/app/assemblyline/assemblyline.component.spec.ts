@@ -13,8 +13,6 @@ import { ConfigureFn, configureTests } from '../../lib/testing';
 import { AssemblyLineComponent } from './assemblyline.component';
 import { AssemblyLineModule } from './assemblyline.module';
 
-/* This test suite will not be submitted with your solution.
-   Feel free to modify it as you wish. */
 
 @Component({
   selector: "test-wrapper-component",
