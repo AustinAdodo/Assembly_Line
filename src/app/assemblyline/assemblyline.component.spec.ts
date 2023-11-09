@@ -8,7 +8,7 @@ import {
   fakeAsync,
   tick
 } from '@angular/core/testing';
-import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
+import { Component, DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ConfigureFn, configureTests } from '../../lib/testing';
 import { AssemblyLineComponent } from './assemblyline.component';
 import { AssemblyLineModule } from './assemblyline.module';
@@ -29,7 +29,7 @@ describe("AssemblyLineComponent", () => {
   let component: AssemblyLineComponent;
   let fixture: ComponentFixture<TestComponentWrapper>;
 
-  const addAll = items => {
+  const addAll = (items: any[]) => {
     const addElem = fixture.debugElement.query(
       By.css('*[data-testid="assembly-add-item"]')
     );
@@ -53,7 +53,7 @@ describe("AssemblyLineComponent", () => {
       });
     };
 
-    configureTests(configure).then(testBed => {
+    configureTests(configure).then((testBed: { createComponent: (arg0: typeof TestComponentWrapper) => ComponentFixture<TestComponentWrapper>; }) => {
       fixture = testBed.createComponent(TestComponentWrapper);
       component = fixture.debugElement.children[0].componentInstance;
       fixture.detectChanges();
@@ -90,7 +90,7 @@ describe("AssemblyLineComponent", () => {
 
   describe("adding assembly items", () => {
     describe('when "goldenrod" is typed into data-testid "assembly-add-item"', () => {
-      let addElem;
+      let addElem: DebugElement;
 
       beforeEach(() => {
         addElem = fixture.debugElement.query(
@@ -144,7 +144,7 @@ describe("AssemblyLineComponent", () => {
       const stages = () => fixture.debugElement.queryAll(
         By.css('*[data-testid="assembly-stage"]')
       );
-      const getStage = stageIndex => {
+      const getStage = (stageIndex: number) => {
         const stage = stages()[stageIndex];
         expect(stage).toBeDefined();
         return stage.nativeElement
