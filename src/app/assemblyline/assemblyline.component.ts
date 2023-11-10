@@ -6,8 +6,9 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./assemblyline.component.css']
 })
 export class AssemblyLineComponent implements OnInit {
-  @Input() stages: string[];
-  items: { [key: string]: string }[];
+  @Input()
+  stages: string[] = [];
+  items!: { [key: string]: string; }[];
   newItem: string = '';
 
   ngOnInit() {
