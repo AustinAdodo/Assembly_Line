@@ -3,6 +3,7 @@
 
 import { By } from '@angular/platform-browser';
 import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import {
   ComponentFixture,
   ComponentFixtureAutoDetect,
