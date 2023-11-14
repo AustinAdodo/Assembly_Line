@@ -1,5 +1,6 @@
 //npm install --save-dev @angular/core/testing
 //npm install --save-dev @testing-library/jest-dom
+//npm install --save-dev jest @types/jest ts-jest
 
 import { By } from '@angular/platform-browser';
 import '@testing-library/jest-dom/extend-expect';
