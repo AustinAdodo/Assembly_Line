@@ -1,6 +1,8 @@
 //npm install --save-dev @angular/core/testing
+//npm install --save-dev @testing-library/jest-dom
 
 import { By } from '@angular/platform-browser';
+import '@testing-library/jest-dom/extend-expect';
 import {
   ComponentFixture,
   ComponentFixtureAutoDetect,
