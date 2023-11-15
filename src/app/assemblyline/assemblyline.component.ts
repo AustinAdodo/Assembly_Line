@@ -22,7 +22,7 @@ import { map } from 'rxjs';
 export class AssemblyLineComponent implements OnInit {
   @Input()
   stages: string[] = [];
-  items!: { [key: string]: string }[];
+  items!: { [key: string]: string }[]; //const item: Map<string, string> = new Map();
   newItem: string = '';
 
   ngOnInit() {
