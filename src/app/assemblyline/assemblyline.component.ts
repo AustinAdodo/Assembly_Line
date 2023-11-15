@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'assemblyline',
@@ -17,9 +18,10 @@ import { Component, Input, OnInit } from '@angular/core';
  * @throws
  * An Error if the `stages` input property is not provided.
  */
+
 export class AssemblyLineComponent implements OnInit {
   @Input()
-  stages: string[] = []; //definition here is the amount of columns to be traversed.
+  stages: string[] = [];
   items!: { [key: string]: string }[];
   newItem: string = '';
 
@@ -30,7 +32,7 @@ export class AssemblyLineComponent implements OnInit {
 
     this.items = [];
     for (let i = 0; i < this.stages.length; i++) {
-      const item = {};
+      const item: { [key: string]: string } = {};
       item[this.stages[0]] = '';
       this.items.push(item);
     }
