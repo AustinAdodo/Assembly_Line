@@ -5,9 +5,13 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './assemblyline.component.html',
   styleUrls: ['./assemblyline.component.css']
 })
+
+/*
+@params
+*/
 export class AssemblyLineComponent implements OnInit {
   @Input()
-  stages: string[] = [];
+  stages: string[] = [];     //definition here is the amount of columns to be traversed.
   items!: { [key: string]: string; }[];
   newItem: string = '';
 
