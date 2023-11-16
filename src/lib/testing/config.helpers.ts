@@ -16,7 +16,7 @@ export const configureTests = (
     ...compilerOptions,
   };
 
-  TestBed.configureCompiler(compilerConfig);
+  TestBed.configureCompiler(compilerConfig); //const configuredTestBed = TestBed.configureCompiler(compilerConfig);
   configure(TestBed);
   return TestBed.compileComponents().then(() => TestBed); //configuredTestBed.compileComponents().then(() => configuredTestBed);
 };
