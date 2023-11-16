@@ -1,19 +1,22 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, TestBedStatic } from '@angular/core/testing';
 
 type CompilerOptions = Partial<{
-  providers: any[]
-  useJit: boolean
-  preserveWhitespaces: boolean
+  providers: any[];
+  useJit: boolean;
+  preserveWhitespaces: boolean;
 }>;
-export type ConfigureFn = (testBed: typeof TestBed) => void;
+export type ConfigureFn = (testBed: TestBedStatic) => void;
 
-export const configureTests = (configure: ConfigureFn, compilerOptions: CompilerOptions = {}) => {
+export const configureTests = (
+  configure: ConfigureFn,
+  compilerOptions: CompilerOptions = {}
+) => {
   const compilerConfig: CompilerOptions = {
     preserveWhitespaces: false,
     ...compilerOptions,
   };
 
-  const configuredTestBed = TestBed.configureCompiler(compilerConfig);
-  configure(configuredTestBed);
-  return configuredTestBed.compileComponents().then(() => configuredTestBed);
-}
+  TestBed.configureCompiler(compilerConfig);
+  configure(TestBed);
+  return TestBed.compileComponents().then(() => TestBed); //configuredTestBed.compileComponents().then(() => configuredTestBed);
+};
