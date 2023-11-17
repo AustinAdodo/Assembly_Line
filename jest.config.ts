@@ -2,8 +2,6 @@
 /**
  * This environment is essential for running Jest tests in a simulated DOM environment similar to a browser
  * @params
- * * stages?: string[]. The amount of columns to be traversed.
- * * items?: string[]. The total number of items.
  *
  * @returns
  * A Configuration object.
