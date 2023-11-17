@@ -2,7 +2,6 @@
 /**
  * This environment is essential for running Jest tests in a simulated DOM environment similar to a browser
  * @params
- *
  * @returns
  * A Configuration object.
  */
