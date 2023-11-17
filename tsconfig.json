@@ -6,6 +6,7 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true, //resolving imports
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -23,11 +24,11 @@
     "lib": [
       "ES2022",
       "dom"
+    ],
+    "types": [
+      "jest",
+      "@types/jest"
     ]
-    // "types": [
-    //   "jest",
-    //   "@types/jest"
-    // ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
