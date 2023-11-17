@@ -23,11 +23,12 @@
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
-      "dom", 
+      "dom",
     ],
     "types": [
       "jest",
-      "@types/jest"
+      "@types/jest",
+      "node"
     ]
   },
   "angularCompilerOptions": {
