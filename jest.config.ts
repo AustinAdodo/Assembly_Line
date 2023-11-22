@@ -1,5 +1,5 @@
 /**
- * A Configuration object
+ * This module specifies the Configuration object for jest.
  *
  * install test environment for dom with npm install --save-dev jest-environment-jsdom
  * npm install --save-dev ts-node
