@@ -1,12 +1,18 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 
+/**
+* In this configuration, "module": "ES2020" is added to the compilerOptions.
+* This configuration helps specify that your TypeScript code should be compiled as ECMAScript Modules (ESM),
+* which might assist in resolving issues related to Jest and Angular ECMAScript Modules.
+ */
+
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true, //resolving imports
+    "esModuleInterop": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -19,11 +25,11 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022",
+    "module": "ES2020", // Or "esnext" based on your preference
     "useDefineForClassFields": false,
     "lib": [
       "ES2022",
-      "dom",
+      "dom"
     ],
     "types": [
       "jest",
@@ -38,3 +44,42 @@
     "strictTemplates": true
   }
 }
+
+// {
+//   "compileOnSave": false,
+//   "compilerOptions": {
+//     "baseUrl": "./",
+//     "outDir": "./dist/out-tsc",
+//     "forceConsistentCasingInFileNames": true,
+//     "esModuleInterop": true, //resolving imports
+//     "strict": true,
+//     "noImplicitOverride": true,
+//     "noPropertyAccessFromIndexSignature": true,
+//     "noImplicitReturns": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "sourceMap": true,
+//     "declaration": false,
+//     "downlevelIteration": true,
+//     "experimentalDecorators": true,
+//     "moduleResolution": "node",
+//     "importHelpers": true,
+//     "target": "ES2022",
+//     "module": "ES2022",
+//     "useDefineForClassFields": false,
+//     "lib": [
+//       "ES2022",
+//       "dom",
+//     ],
+//     "types": [
+//       "jest",
+//       "@types/jest",
+//       "node"
+//     ]
+//   },
+//   "angularCompilerOptions": {
+//     "enableI18nLegacyMessageIdFormat": false,
+//     "strictInjectionParameters": true,
+//     "strictInputAccessModifiers": true,
+//     "strictTemplates": true
+//   }
+// }

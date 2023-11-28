@@ -14,8 +14,8 @@
 
 export default {
   testEnvironment: 'jsdom',
-  preset: 'ts-jest',
-  extensionsToTreatAsEsm: ['.ts', '.tsx', '.jsx'],
+  preset: 'ts-jest/presets/default-esm', // Use the default ESM preset
+  extensionsToTreatAsEsm: ['.ts', '.tsx', '.jsx',],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
@@ -28,6 +28,7 @@ export default {
       // Other ts-jest configuration options can be added here if needed
     },
   },
+  transformIgnorePatterns: ['/node_modules/(?!@angular)'], // Transform Angular node_modules
 };
 
 

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { map } from 'rxjs';
+//import { map } from 'rxjs';
 
 @Component({
   selector: 'assemblyline',

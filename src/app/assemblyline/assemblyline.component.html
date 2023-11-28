@@ -1,5 +1,26 @@
 <!-- TODO -- src/app/assemblyline/assemblyline.component.html -->
-<table>
+<div>
+  <input data-testid="assembly-add-item" [(ngModel)]="newItem" (keydown.enter)="addItem()" />
+
+  <div *ngFor="let stage of stages; let i = index" data-testid="assembly-stage">
+    {{ stage }}
+    <button
+      *ngFor="let item of items[i]; let j = index"
+      data-testid="assembly-item"
+      (click)="moveItem(j, i, true)"
+      (contextmenu)="moveItem(j, i, false); $event.preventDefault()"
+      (dblclick)="deleteItem(j, i)"
+    >
+      {{ item }}
+    </button>
+  </div>
+</div>
+
+
+
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Idea</th>
@@ -15,7 +36,7 @@
       </td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
 
 

@@ -1,4 +1,6 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+//NB:It might contain specific settings related to Angular's Ahead-of-Time (AOT) compilation,
+//template checks, and other Angular-specific features.
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
