@@ -7,7 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./assemblyline.component.css'],
 })
 
-/**
+
+export class AssemblyLineComponent implements OnInit {
+  /**
+ * Component for the mimicked assembly line
  * @params
  * * stages?: string[]. The amount of columns to be traversed.
  * * items?: string[]. The total number of items.
@@ -19,7 +22,6 @@ import { Component, Input, OnInit } from '@angular/core';
  * An Error if the `stages` input property is not provided.
  */
 
-export class AssemblyLineComponent implements OnInit {
   @Input()
   stages: string[] = [];
   items!: { [key: string]: string }[]; //const item: Map<string, string> = new Map();
