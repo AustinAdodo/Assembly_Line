@@ -5,11 +5,11 @@
   <div *ngFor="let stage of stages; let i = index" data-testid="assembly-stage">
     {{ stage }}
     <button
-      *ngFor="let item of items[i]; let j = index"
+      *ngFor="let item in items[i]; let j = index"
       data-testid="assembly-item"
-      (click)="moveItem(j, i, true)"
-      (contextmenu)="moveItem(j, i, false); $event.preventDefault()"
-      (dblclick)="deleteItem(j, i)"
+      (click)="moveItem(item, j, i, true)"
+      (contextmenu)="moveItem(item, j, i, false); $event.preventDefault()"
+      (dblclick)="deleteItem()"
     >
       {{ item }}
     </button>

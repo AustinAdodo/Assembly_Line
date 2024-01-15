@@ -74,5 +74,7 @@ export class AssemblyLineComponent implements OnInit {
       }
     }
   }
+
+  deleteItem(){this.items.pop()}
 }
 
